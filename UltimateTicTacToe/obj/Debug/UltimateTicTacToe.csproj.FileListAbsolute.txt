@@ -1,0 +1,9 @@
+C:\Users\jovanjovanovski\source\repos\UltimateTicTacToe\UltimateTicTacToe\bin\Debug\UltimateTicTacToe.exe
+C:\Users\jovanjovanovski\source\repos\UltimateTicTacToe\UltimateTicTacToe\bin\Debug\UltimateTicTacToe.pdb
+C:\Users\jovanjovanovski\source\repos\UltimateTicTacToe\UltimateTicTacToe\obj\Debug\UltimateTicTacToe.csprojResolveAssemblyReference.cache
+C:\Users\jovanjovanovski\source\repos\UltimateTicTacToe\UltimateTicTacToe\obj\Debug\UltimateTicTacToe.Properties.Resources.resources
+C:\Users\jovanjovanovski\source\repos\UltimateTicTacToe\UltimateTicTacToe\obj\Debug\UltimateTicTacToe.csproj.GenerateResource.Cache
+C:\Users\jovanjovanovski\source\repos\UltimateTicTacToe\UltimateTicTacToe\obj\Debug\UltimateTicTacToe.csproj.CoreCompileInputs.cache
+C:\Users\jovanjovanovski\source\repos\UltimateTicTacToe\UltimateTicTacToe\obj\Debug\UltimateTicTacToe.exe
+C:\Users\jovanjovanovski\source\repos\UltimateTicTacToe\UltimateTicTacToe\obj\Debug\UltimateTicTacToe.pdb
+C:\Users\jovanjovanovski\source\repos\UltimateTicTacToe\UltimateTicTacToe\obj\Debug\UltimateTicTacToe.GameForm.resources
