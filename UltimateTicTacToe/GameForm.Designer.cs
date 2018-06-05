@@ -44,6 +44,10 @@
             this.CurrentTurnStaticLabel = new System.Windows.Forms.Label();
             this.CurrentTurnLabel = new System.Windows.Forms.Label();
             this.CurrentTurnImage = new System.Windows.Forms.PictureBox();
+            this.InstructionsPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.MenuContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoImage)).BeginInit();
             this.GameContainer.SuspendLayout();
@@ -59,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BigTable)).BeginInit();
             this.CurrentTurnContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTurnImage)).BeginInit();
+            this.InstructionsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuContainer
@@ -137,7 +142,7 @@
             this.GameContainer.Controls.Add(this.t00);
             this.GameContainer.Controls.Add(this.BigTable);
             this.GameContainer.Controls.Add(this.CurrentTurnContainer);
-            this.GameContainer.Location = new System.Drawing.Point(0, 1);
+            this.GameContainer.Location = new System.Drawing.Point(0, 0);
             this.GameContainer.Name = "GameContainer";
             this.GameContainer.Size = new System.Drawing.Size(804, 521);
             this.GameContainer.TabIndex = 5;
@@ -290,12 +295,57 @@
             this.CurrentTurnImage.TabIndex = 0;
             this.CurrentTurnImage.TabStop = false;
             // 
+            // InstructionsPanel
+            // 
+            this.InstructionsPanel.Controls.Add(this.label2);
+            this.InstructionsPanel.Controls.Add(this.button1);
+            this.InstructionsPanel.Controls.Add(this.label1);
+            this.InstructionsPanel.Location = new System.Drawing.Point(1, 0);
+            this.InstructionsPanel.Name = "InstructionsPanel";
+            this.InstructionsPanel.Size = new System.Drawing.Size(804, 522);
+            this.InstructionsPanel.TabIndex = 14;
+            this.InstructionsPanel.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(302, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(195, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "INSTRUCTIONS";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(279, 462);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(247, 39);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "BACK";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.BackButton_Clicked);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(174, 102);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(459, 60);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Win three small boards in order to win the big board.\r\nYour opponent\'s previous m" +
+    "ove determines in which small board\r\nyou must play your next move.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // GameForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(804, 522);
             this.Controls.Add(this.GameContainer);
+            this.Controls.Add(this.InstructionsPanel);
             this.Controls.Add(this.MenuContainer);
             this.Name = "GameForm";
             this.Text = "Ultimate Tic-Tac-Toe";
@@ -317,6 +367,8 @@
             this.CurrentTurnContainer.ResumeLayout(false);
             this.CurrentTurnContainer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentTurnImage)).EndInit();
+            this.InstructionsPanel.ResumeLayout(false);
+            this.InstructionsPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -344,5 +396,9 @@
         private System.Windows.Forms.PictureBox t10;
         private System.Windows.Forms.PictureBox t02;
         private System.Windows.Forms.PictureBox t01;
+        private System.Windows.Forms.Panel InstructionsPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

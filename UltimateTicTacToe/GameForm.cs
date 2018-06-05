@@ -30,10 +30,16 @@ namespace UltimateTicTacToe {
 
         private void InstructionsButton_Click(object sender, EventArgs e) {
             MenuContainer.Visible = false;
+            InstructionsPanel.Visible = true;
         }
 
         private void ExitButton_Click(object sender, EventArgs e) {
             Application.Exit();
+        }
+
+        private void BackButton_Clicked(object sender, EventArgs e) {
+            InstructionsPanel.Visible = false;
+            MenuContainer.Visible = true;
         }
 
         #endregion
@@ -182,5 +188,9 @@ namespace UltimateTicTacToe {
         }
 
         #endregion
+
+        private void label1_Click(object sender, EventArgs e) {
+
+        }
     }
 }
