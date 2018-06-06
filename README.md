@@ -112,3 +112,11 @@ private int capacity = 9;
 ```
 
 ## Screenshots
+1. Главното мени
+![Screenshot 1](https://raw.githubusercontent.com/popovskai/ultimatetictactoe/master/screenshots/ss1.png)
+
+2. Играта е во тек. Играчот може да игра во „фокусираната“ табела означена со светло жолта боја.
+![Screenshot 2](https://raw.githubusercontent.com/popovskai/ultimatetictactoe/master/screenshots/ss2.png)
+
+3. Играта е завршена.
+![Screenshot 3](https://raw.githubusercontent.com/popovskai/ultimatetictactoe/master/screenshots/ss3.png)
