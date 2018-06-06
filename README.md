@@ -88,6 +88,27 @@ public bool HasWon(int i, int j, GameForm.Player player) {
 }
 ```
 
-## Функција
+### Класата SmallTable
+
+SmallTable е класа која претставува помала табела. Класата ги содржи следните променливи:
+
+```cs
+// dali tabelata e 'fokusirana', odnosno dali igracot moze da igra vo ovaa tabela ovoj poteg
+private bool Focused;
+// dali nekoj od igracite pobedil na ovaa tabela (NONE ako se' uste nema pobednik)
+private GameForm.Player WonBy = GameForm.Player.NONE;
+
+// 3x3 matrica vo koja se cuvaat izigranite potezi na igracite
+private GameForm.Player[,] table;
+
+// elementot so koj e pretstavena tabelata vo formata
+// elementot e PictureBox so slika od tabelata, a vo nego se dodavaat pomali sliki X ili O
+private PictureBox TableImage;
+
+// redicata i kolonata na ovaa tabela vo golemata tabela
+private int TableRow, TableColumn;
+// kapacitet, odnosno kolku slobodni polinja se ostanati na tabelata
+private int capacity = 9;
+```
 
 ## Screenshots
