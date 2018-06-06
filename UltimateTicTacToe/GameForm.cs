@@ -69,9 +69,13 @@ namespace UltimateTicTacToe {
             tables[2, 0] = new SmallTable(this, 2, 0, t20);
             tables[2, 1] = new SmallTable(this, 2, 1, t21);
             tables[2, 2] = new SmallTable(this, 2, 2, t22);
-            
-            for(int i = 0; i < 3; i++) {
-                for(int j = 0; j < 3; j++) {
+
+            FocusAll();
+        }
+
+        private void FocusAll() {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
                     tables[i, j].SetFocused(true);
                 }
             }
@@ -102,22 +106,17 @@ namespace UltimateTicTacToe {
         }
 
         public void SetFocusedTable(int row, int column) {
-            if(tables[row, column].IsWon() || tables[row, column].GetCapacity() == 0) {
+            if (tables[row, column].IsWon() || tables[row, column].GetCapacity() == 0) {
+                FocusAll();
+            } else {
                 for (int i = 0; i < 3; i++) {
                     for (int j = 0; j < 3; j++) {
-                        tables[i, j].SetFocused(true);
+                        tables[i, j].SetFocused(false);
                     }
                 }
-                return;
-            }
 
-            for(int i = 0; i < 3; i++) {
-                for(int j = 0; j < 3; j++) {
-                    tables[i, j].SetFocused(false);
-                }
+                tables[row, column].SetFocused(true);
             }
-
-            tables[row, column].SetFocused(true);
         }
 
         public void CheckWin(int row, int column, GameForm.Player player) {
@@ -186,9 +185,5 @@ namespace UltimateTicTacToe {
         }
 
         #endregion
-
-        private void label1_Click(object sender, EventArgs e) {
-
-        }
     }
 }
