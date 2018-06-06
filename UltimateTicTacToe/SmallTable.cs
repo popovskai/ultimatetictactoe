@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace UltimateTicTacToe {
     class SmallTable {
 
-        private bool Focused;
+        private bool Focused = false;
         private GameForm.Player WonBy = GameForm.Player.NONE;
 
         private GameForm.Player[,] table;
@@ -37,18 +37,11 @@ namespace UltimateTicTacToe {
         }
 
         private void OnClick(object sender, EventArgs e) {
-            if(!Focused) {
+            if(!Focused) return;
+            if(IsWon()) return;
 
-                return;
-            }
-
-            if(IsWon()) {
-
-                return;
-            }
-
-            MouseEventArgs me = (MouseEventArgs)e;
-            Point mouseCoordinates = me.Location;
+            MouseEventArgs mouseEventArgs = (MouseEventArgs)e;
+            Point mouseCoordinates = mouseEventArgs.Location;
 
             int row = GetRow(mouseCoordinates);
             int column = GetColumn(mouseCoordinates);

@@ -15,9 +15,7 @@ namespace UltimateTicTacToe {
             InitializeComponent();
         }
 
-        private void GameForm_Load(object sender, EventArgs e) {
-
-        }
+        private void GameForm_Load(object sender, EventArgs e) { }
 
         #region Menu
 
@@ -122,17 +120,17 @@ namespace UltimateTicTacToe {
             tables[row, column].SetFocused(true);
         }
 
-        public void CheckWin(int i, int j, GameForm.Player player) {
-            if(HasWon(i, j, player)) {
+        public void CheckWin(int row, int column, GameForm.Player player) {
+            if(HasWon(row, column, player)) {
                 if(player == Player.X) {
                     MessageBox.Show("The RED player won!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 } else {
                     MessageBox.Show("The BLUE player won!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
-                for(int ii = 0; ii < 3; ii++) {
-                    for(int jj = 0; jj < 3; jj++) {
-                        tables[ii, jj].GetTableImage().Controls.Clear();
+                for(int i = 0; i < 3; i++) {
+                    for(int j = 0; j < 3; j++) {
+                        tables[i, j].GetTableImage().Controls.Clear();
                     }
                 }
 
@@ -140,9 +138,9 @@ namespace UltimateTicTacToe {
                 MenuContainer.Visible = true;
             } else {
                 bool allWon = true;
-                for (int ii = 0; ii < 3; ii++) {
-                    for (int jj = 0; jj < 3; jj++) {
-                        if(!tables[ii, jj].IsWon() && tables[ii, jj].GetCapacity() > 0) {
+                for (int i = 0; i < 3; i++) {
+                    for (int j = 0; j < 3; j++) {
+                        if(!tables[i, j].IsWon() && tables[i, j].GetCapacity() > 0) {
                             allWon = false;
                             break;
                         }
@@ -151,9 +149,9 @@ namespace UltimateTicTacToe {
                 if(allWon) {
                     MessageBox.Show("No one won - DRAFT!", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-                    for (int ii = 0; ii < 3; ii++) {
-                        for (int jj = 0; jj < 3; jj++) {
-                            tables[ii, jj].GetTableImage().Controls.Clear();
+                    for (int i = 0; i < 3; i++) {
+                        for (int j = 0; j < 3; j++) {
+                            tables[i, j].GetTableImage().Controls.Clear();
                         }
                     }
 
